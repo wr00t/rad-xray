@@ -1,13 +1,13 @@
 # rad-xray
-xray+rad批量主动扫描
+xray+rad 批量主动扫描
 
 ## Usage: 
 
 ## 社区版用户
 
-url一行一个放url.txt中，和rad放同文件夹
+url 一行一个放 url.txt 中，和 rad 放同文件夹
 
-xray开启监听，
+xray 开启监听，
 
 ./xray webscan --listen 127.0.0.1:7777 --html-output report__datetime__.html
 
@@ -19,13 +19,13 @@ python3 rad+xray.py
 
 ## 高级版用户
 
-url一行一个放url.txt中
+url一行一个放 url.txt 中
 
-browserscan.py和xray.exe和rad.exe放同一文件夹
+advanced_xray_scanner.py 和 xray 和 rad 放同一文件夹，注意命名
 
 运行py:
 
-python3 browserscan.py
+python3 advanced_xray_scanner.py -i url.txt
 
 
 ## etc
