@@ -2,9 +2,14 @@
 # coding: utf-8
 import subprocess
 import sys, getopt
+from datetime import datetime
 
 def scanner(url):
 	target = url
+	# 生成输出文件名
+	output_target = url.split('//')[1].split('/')[0].replace(':','_')
+	timestamp = datetime.timestamp(datetime.now())
+	output_file = f'results/report_{output_target}_{timestamp}.html'
 	cmd = ["./xray", "webscan", "--browser-crawler", target, "--html-output", "results/report__datetime__.html"]
 	rsp=subprocess.Popen(cmd)
 	output, error = rsp.communicate()
